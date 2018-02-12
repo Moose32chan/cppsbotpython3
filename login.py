@@ -26,8 +26,8 @@ if s == 'Covfefe':
 
         with requests.Session() as c: #to login the account
                         url = 'http://media.cpps.me/play/?lang=en' #filler url
-                        USER = 'ISuckAtFind4' #put username here
-                        PASS = 'mason1234' #put password here
+                        USER = '' #put username here
+                        PASS = '' #put password here
                         headers = {'user-agent': 'my-app/0.0.1'} #put header here
                         login_data = dict(Penguin_Name=USER, Password = PASS)  #this might work?
                         c.post(url, data=login_data, headers=headers) #this might work?
