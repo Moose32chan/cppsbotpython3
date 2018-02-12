@@ -10,7 +10,7 @@ import requests
 #number of bots
 b = input('Amount of bots:\n')
 
-#server (only Covfefe is supported atm)
+#server // may be used in future version
 s = input('Server:\n')
 
 #login ip // may be used in future version
