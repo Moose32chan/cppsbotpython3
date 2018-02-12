@@ -26,8 +26,16 @@ if s == Covfefe:
 		exit()
 
 		with requests.Session() as c: #to login the account
-			url = 'media.cpps.me/play' #filler url
+			url = 'http://media.cpps.me/play/?lang=en' #filler url
 			USER = '' #put username here
 			PASS = '' #put password here
-			login_data = dict(PenguinName=USER, Password = PASS)  #fix this
-			c.post(url, data=login_data, headers={"Referer": "cpps.me"}) #fix this
+			headers = {'user-agent': 'my-app/0.0.1'} #put header here
+			login_data = dict(username=USER, password = PASS)  #this might work?
+			c.post(url, data=login_data, headers=headers) #this might work?
+			r.status_code
+			if r.status_code == 101: #honestly not sure if this works lmao
+				print('Wrong Password, Try Again.')
+				end()
+				if r.status_code == 100:
+					print('Wrong Username, Try Again.')
+					end()
